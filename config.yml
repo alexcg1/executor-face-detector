@@ -1,0 +1,4 @@
+jtype: FaceDetector
+metas:
+  py_modules:
+    - executor.py
