@@ -1,6 +1,8 @@
 # FaceDetector
 
-Detects if a human face is in an image Document.
+Note: WIP, not fully baked yet
+
+Detects if a human face is in an image Document and stores `True` or `False` in `doc.tags['is_human']`.
 
 **Note**: It recognizes *human faces in general*. It doesn't recognize *individuals*.
 
