@@ -1,6 +1,7 @@
 from jina import Executor, DocumentArray, requests
 import face_recognition
 from PIL import Image
+import os
 
 def check_human(image_uri):
     """check_human.
@@ -38,5 +39,4 @@ class FaceDetector(Executor):
             image.save("doc_content.jpg")
 
             doc.tags["is_human"] = check_human("doc_content.jpg")
-
-
+            os.remove("doc_content.jpg")
