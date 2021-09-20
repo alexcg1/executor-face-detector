@@ -20,7 +20,7 @@ class FaceDetector(Executor):
     @requests(on="/search")
     def check_human(self, docs: DocumentArray, **kwargs):
         """check_human.
-        Checks for a human in an image Document, and writes True or False to doc.tags["is_human"]
+        Checks for a human face in an image Document, and writes True or False to doc.tags["is_human"]
         :param docs:
         :type docs: DocumentArray
         :param kwargs:
