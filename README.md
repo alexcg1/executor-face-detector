@@ -2,7 +2,7 @@
 
 Detects if a human face is in an image Document.
 
-**Note**: It *detects* human faces. It doesn't *recognize* individuals.
+**Note**: It recognizes *human faces in general*. It doesn't recognize *individuals*.
 
 In the words of the late, great [Terry Pratchett](http://www.chrisjoneswriting.com/terry-pratchett-quotes/technology-terry-pratchett-quote):
 
