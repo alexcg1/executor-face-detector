@@ -1,6 +1,7 @@
 from jina import Document, DocumentArray, Flow
 from jina.types.document.generators import from_files
-from executor import FaceDetector
+# from ..executor import FaceDetector
+from .. import FaceDetector
 
 docs = DocumentArray(from_files("test_data/**/*.jpg"))
 
@@ -17,6 +18,7 @@ flow = (
 with flow:
     output = flow.index(inputs=docs, return_results=True)
 
-for doc in output[0].docs:
-    manual_label = doc.tags["uri"].split("/")[1]
-    assert manual_label == str(doc.tags["is_human"])
+def test_matches():
+    for doc in output[0].docs:
+        manual_label = doc.tags["uri"].split("/")[1]
+        assert manual_label == str(doc.tags["is_human"])
