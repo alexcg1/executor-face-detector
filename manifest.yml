@@ -1,3 +1,5 @@
 manifest_version: 1
 name: FaceDetector
-keywords: [face, detector, utility]
+url: https://github.com/alexcg1/executor_face_detector
+description: Detect (but not recognize) human faces in images
+keywords: [face, detector, utility, image]
