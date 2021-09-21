@@ -12,6 +12,11 @@ In the words of the late, great [Terry Pratchett](http://www.chrisjoneswriting.c
 > Vimes pulled out his notebook and held it up. ‘Like this?’ he said.
 > The imp squinted for a moment. ‘Yep,’ it said. ‘That’s handwriting, sure enough. Curly bits, spiky bits, all joined together. Yep. Handwriting. I’d recognize it anywhere.'
 
+## Why would you use this?
+
+- You're indexing your personal photo collection and later in the Flow you'll use a facial-recognition encoder so you can search by an individual's face. This can filter out all the non-faces, thus saving compute in the encoding step.
+- You're creating a human face search engine (e.g. find your celebrity twin) and you don't want trolls getting cheap laughs from uploading inappropriate pictures and seeing who matches.
+
 ## Usage
 
 #### via Docker image (recommended)
