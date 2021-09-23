@@ -1,3 +1,4 @@
+import pytest
 from jina import Document, DocumentArray, Flow
 from jina.types.document.generators import from_files
 from .. import FaceDetector
@@ -17,9 +18,14 @@ flow = (
 with flow:
     output = flow.index(inputs=docs, return_results=True)
 
-# I want it to test each doc in the list, but don't know how to do that in pytest
-def test_matches():
-    for doc in output[0].docs:
-        manual_label = doc.tags["uri"].split("/")[1] # Label added by hand (i.e. name of subfolder)
-        machine_label = str(doc.tags["is_human"]) # Label added by executor. Cast to string so same as manual labels
-        assert manual_label == machine_label
+output_docs = output[0].docs
+
+all_labels = []
+
+for doc in output_docs:
+    both_labels = (doc.tags["uri"].split("/")[1], doc.tags["is_human"])
+    all_labels.append(both_labels)
+
+@pytest.mark.parametrize("manual_label, model_label", all_labels)
+def test_labels_match(manual_label, model_label):
+    assert str(manual_label) == str(model_label)
