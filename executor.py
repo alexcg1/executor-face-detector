@@ -19,6 +19,8 @@ def check_human(image_uri):
 
 
 class FaceDetector(Executor):
+    """FaceDetector."""
+
     def __init__(self, skip_non_faces, **kwargs):
         super().__init__(**kwargs)
         self.skip_non_faces = skip_non_faces
